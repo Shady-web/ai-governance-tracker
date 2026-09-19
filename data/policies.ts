@@ -32,6 +32,7 @@ export const policies: PolicyEntry[] = [
     name: "National Artificial Intelligence Strategy (NAIS)",
     issuingBody: "Federal Ministry of Communications, Innovation and Digital Economy (FMCIDE)",
     year: 2024,
+    yearLabel: "Developed 2024, published 2025",
     type: "strategy",
     status: "in-force",
     jurisdiction: "Nigeria",

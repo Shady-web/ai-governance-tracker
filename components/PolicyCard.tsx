@@ -19,7 +19,7 @@ export default function PolicyCard({ policy }: { policy: PolicyEntry }) {
         </Link>
       </h3>
       <p className="mt-1 text-xs text-slate-500">
-        {policy.issuingBody} · {policy.year}
+        {policy.issuingBody} · {policy.yearLabel ?? policy.year}
       </p>
       <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-slate-600">
         {policy.summary}

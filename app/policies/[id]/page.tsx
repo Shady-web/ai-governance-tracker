@@ -64,7 +64,7 @@ export default function PolicyDetailPage({ params }: Props) {
           {policy.name}
         </h1>
         <p className="mt-2 text-slate-500">
-          {policy.issuingBody} · {policy.year}
+          {policy.issuingBody} · {policy.yearLabel ?? policy.year}
         </p>
       </header>
 
@@ -77,7 +77,7 @@ export default function PolicyDetailPage({ params }: Props) {
             {JURISDICTION_LABELS[policy.jurisdiction]}
           </Field>
           <Field label="Issuing body">{policy.issuingBody}</Field>
-          <Field label="Year">{policy.year}</Field>
+          <Field label="Year">{policy.yearLabel ?? policy.year}</Field>
           <Field label="Source">
             <a
               href={policy.sourceUrl}

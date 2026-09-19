@@ -35,6 +35,8 @@ export interface PolicyEntry {
   issuingBody: string;
   /** Year of adoption, publication, or introduction */
   year: number;
+  /** Optional display text replacing `year`, e.g. "Developed 2024, published 2025" */
+  yearLabel?: string;
   /** Legal character of the instrument */
   type: PolicyType;
   /** Current status */
