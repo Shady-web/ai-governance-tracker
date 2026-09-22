@@ -11,14 +11,11 @@ export const POLICY_TYPES = [
   "strategy",
   "bill",
   "framework",
+  "directive",
+  "treaty",
 ] as const;
 
-export const POLICY_STATUSES = [
-  "in-force",
-  "proposed",
-  "draft",
-  "lapsed",
-] as const;
+export const POLICY_STATUSES = ["proposed", "adopted", "implemented"] as const;
 
 export const JURISDICTIONS = ["Nigeria", "AU", "ECOWAS"] as const;
 
@@ -72,6 +69,8 @@ export interface PolicyEntry {
   publicationDate?: string | null;
   /** ISO date (YYYY-MM-DD) the instrument was formally adopted or enacted, if known precisely. */
   adoptionDate?: string | null;
+  /** ISO date (YYYY-MM-DD) the instrument commenced or entered into force, if known precisely. */
+  effectiveDate?: string | null;
   /**
    * The preferred, authoritative citation for this entry (see Source standard
    * in /methodology). Falls back to `sourceUrl` in the UI when absent.
@@ -92,10 +91,9 @@ export interface PolicyEntry {
 
 /** Human-readable labels used across the UI */
 export const STATUS_LABELS: Record<PolicyStatus, string> = {
-  "in-force": "In force",
   proposed: "Proposed",
-  draft: "Draft",
-  lapsed: "Lapsed",
+  adopted: "Adopted",
+  implemented: "Implemented",
 };
 
 export const TYPE_LABELS: Record<PolicyType, string> = {
@@ -104,6 +102,8 @@ export const TYPE_LABELS: Record<PolicyType, string> = {
   strategy: "Strategy",
   bill: "Bill",
   framework: "Framework",
+  directive: "Directive",
+  treaty: "Treaty",
 };
 
 export const JURISDICTION_LABELS: Record<Jurisdiction, string> = {

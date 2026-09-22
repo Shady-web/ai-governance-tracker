@@ -8,10 +8,9 @@ import {
 } from "@/data/types";
 
 const STATUS_STYLES: Record<PolicyStatus, string> = {
-  "in-force": "bg-brand-50 text-brand-800 ring-brand-600/20",
   proposed: "bg-amber-50 text-amber-800 ring-amber-600/20",
-  draft: "bg-sky-50 text-sky-800 ring-sky-600/20",
-  lapsed: "bg-slate-100 text-slate-600 ring-slate-500/20",
+  adopted: "bg-sky-50 text-sky-800 ring-sky-600/20",
+  implemented: "bg-brand-50 text-brand-800 ring-brand-600/20",
 };
 
 const base =

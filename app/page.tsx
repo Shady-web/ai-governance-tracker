@@ -3,7 +3,7 @@ import StatsChart from "@/components/StatsChart";
 import { policies } from "@/data/policies";
 
 export default function HomePage() {
-  const inForce = policies.filter((p) => p.status === "in-force").length;
+  const implemented = policies.filter((p) => p.status === "implemented").length;
 
   return (
     <>
@@ -18,7 +18,7 @@ export default function HomePage() {
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-600">
             A curated, plain-language tracker of AI-related laws, bills,
-            strategies, guidelines, and frameworks in Nigeria, alongside
+            strategies, guidelines, directives, treaties, and frameworks in Nigeria, alongside
             African Union and ECOWAS-level instruments that shape the
             continental context.
           </p>
@@ -51,8 +51,8 @@ export default function HomePage() {
           At a glance
         </h2>
         <p className="mt-2 max-w-2xl text-slate-600">
-          {policies.length} instruments tracked, {inForce} of them currently in
-          force. Counts update automatically as entries are added.
+          {policies.length} instruments tracked, {implemented} classified as
+          implemented. Counts update automatically as entries are added.
         </p>
         <div className="mt-8">
           <StatsChart />
@@ -76,7 +76,7 @@ export default function HomePage() {
             <div>
               <h3 className="font-semibold text-slate-900">What is tracked</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                Laws, bills, strategies, guidelines, and frameworks that
+                Laws, bills, strategies, guidelines, directives, treaties, and frameworks that
                 regulate, enable, or directly affect artificial intelligence —
                 including data protection instruments that govern automated
                 decision-making and the data AI systems depend on.

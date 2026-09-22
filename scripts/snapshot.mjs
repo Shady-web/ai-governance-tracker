@@ -7,6 +7,7 @@
  *   npm run snapshot                # snapshot for today, refuses to overwrite
  *   npm run snapshot -- --force     # overwrite today's snapshot if it exists
  *   npm run snapshot -- 2026-06-15  # snapshot dated for a specific day
+ *   npm run snapshot -- 2026-09-22 --label post-audit
  *
  * Uses the `typescript` package (already a devDependency) to transpile
  * data/policies.ts on the fly, so no build step or extra dependency is
@@ -50,6 +51,29 @@ function main() {
   const force = args.includes("--force");
   const dateArg = args.find((a) => /^\d{4}-\d{2}-\d{2}$/.test(a));
   const date = dateArg ?? new Date().toISOString().slice(0, 10);
+  const labelFlagIndex = args.indexOf("--label");
+  const rawLabel =
+    labelFlagIndex >= 0
+      ? args[labelFlagIndex + 1]
+      : args.find((a) => a.startsWith("--label="))?.slice("--label=".length);
+
+  if (labelFlagIndex >= 0 && (!rawLabel || rawLabel.startsWith("--"))) {
+    console.error("Pass a value after --label, e.g. --label post-audit");
+    process.exit(1);
+  }
+
+  const label = rawLabel
+    ? rawLabel
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+    : null;
+
+  if (rawLabel && !label) {
+    console.error("The snapshot label must contain at least one letter or number.");
+    process.exit(1);
+  }
 
   const policies = loadPolicies();
   if (!Array.isArray(policies) || policies.length === 0) {
@@ -58,11 +82,12 @@ function main() {
   }
 
   fs.mkdirSync(snapshotsDir, { recursive: true });
-  const outPath = path.join(snapshotsDir, `${date}.json`);
+  const filename = `${date}${label ? `-${label}` : ""}.json`;
+  const outPath = path.join(snapshotsDir, filename);
 
   if (fs.existsSync(outPath) && !force) {
     console.error(
-      `Snapshot for ${date} already exists at data/snapshots/${date}.json.\n` +
+      `Snapshot already exists at data/snapshots/${filename}.\n` +
         `Pass --force to overwrite it: npm run snapshot -- --force`
     );
     process.exit(1);
@@ -70,13 +95,14 @@ function main() {
 
   const snapshot = {
     snapshotDate: date,
+    ...(label ? { label } : {}),
     generatedAt: new Date().toISOString(),
     entryCount: policies.length,
     policies,
   };
 
   fs.writeFileSync(outPath, JSON.stringify(snapshot, null, 2) + "\n");
-  console.log(`Wrote data/snapshots/${date}.json (${policies.length} entries).`);
+  console.log(`Wrote data/snapshots/${filename} (${policies.length} entries).`);
 }
 
 main();

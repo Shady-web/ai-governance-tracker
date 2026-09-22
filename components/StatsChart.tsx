@@ -59,10 +59,9 @@ export default function StatsChart() {
   const maxJurisdiction = Math.max(...jurisdictionCounts.map((d) => d.count));
 
   const statusColors: Record<string, string> = {
-    "in-force": "bg-brand-600",
     proposed: "bg-amber-500",
-    draft: "bg-sky-500",
-    lapsed: "bg-slate-400",
+    adopted: "bg-sky-500",
+    implemented: "bg-brand-600",
   };
 
   return (

@@ -1,6 +1,6 @@
 # Nigeria & Africa AI Governance Tracker
 
-A public-facing reference tool that aggregates and visualizes AI-related policies, laws, and guidelines in Nigeria, with a secondary layer for African Union and ECOWAS-level instruments.
+A public-facing reference tool for an evidence-based selection of AI-related policies, laws, strategies, and regulatory instruments in Nigeria, with a secondary layer for African Union and ECOWAS-level instruments. The active dataset contains 10 core instruments; it is not intended to be exhaustive.
 
 Built with Next.js (App Router), React, TypeScript, and Tailwind CSS. All data lives in typed local files — no database, no backend API.
 
@@ -8,16 +8,16 @@ The tracker follows an explicit research methodology, published at `/methodology
 
 - **Inclusion criteria** — what qualifies an instrument for a listing, and what doesn't (see [Scope and inclusion](app/methodology/page.tsx)).
 - **A primary-source hierarchy** — official/institutional sources are preferred; secondary reporting is used to discover entries or add context, not as the sole basis for a legal or implementation claim.
-- **Defined status classifications** — *Proposed / Adopted / Implemented*, each with a specific evidentiary bar (see `/methodology#status-definitions`).
+- **Defined status classifications** — *Proposed / Adopted / Implemented*, each with a specific evidentiary bar. Adoption is explicitly separated from implementation (see `/methodology#status-definitions`).
 - **Verification dates** — a `lastVerified` field per entry records when its status and links were last checked, separate from the instrument's own publication/adoption date. Entries that haven't been checked yet show "Verification date pending" rather than a guessed date.
 - **Change records** — corrections to existing entries (status changes, corrected dates, replaced sources, etc.) are logged at `/changelog` instead of being silently overwritten.
-- **Dated data snapshots** — point-in-time copies of the dataset under `data/snapshots/`, so past states of the tracker can be reconstructed.
+- **Dated data snapshots** — point-in-time copies of the dataset under `data/snapshots/`, so significant research states can be reconstructed without overwriting earlier states.
 
-**Note on the current status badges:** the four status badges shown on entries today (In force / Proposed / Draft / Lapsed) predate the Proposed/Adopted/Implemented framework above and have not yet been re-assessed against it. Remapping them requires an entry-by-entry verification pass, which is a separate, ongoing research task — not something the software changes on its own. See the implementation note on `/methodology`.
+The first methodology audit was completed on 22 September 2026. It migrated the active dataset to the Proposed / Adopted / Implemented framework, added structured primary institutional sources and verification details, and reduced the core dataset from 12 to 10 entries under the tightened inclusion criteria.
 
 ## Data notes
 
-The original 12 entries were compiled from public sources in June 2026. The methodology, audit fields, and changelog described in this README were added afterwards to make future corrections auditable — they do not by themselves mean those 12 entries have been re-verified under the new methodology yet. Treat `lastVerified: "Verification date pending"` as the honest current state, and verify against the linked source before citing.
+The original 12-entry state is preserved at `data/snapshots/2026-09-22.json`. The first audited 10-entry state is preserved separately at `data/snapshots/2026-09-22-post-audit.json`. Significant corrections are recorded in `data/changelog.ts` rather than silently overwritten. Inclusion remains evidence-based rather than exhaustive, and primary institutional sources are preferred.
 
 ## Getting started
 
@@ -34,7 +34,7 @@ npm run lint      # ESLint
 2. Copy any existing object and paste it at the end of the array.
 3. Give it a unique kebab-case `id` — this becomes the URL slug (`/policies/<id>`).
 4. Fill in every required field. `type`, `status`, and `jurisdiction` must be one of the allowed values in [`data/types.ts`](data/types.ts) — TypeScript will flag anything else at `npm run build`.
-5. Optionally fill in the audit fields (`publicationDate`, `adoptionDate`, `primarySource`, `supplementalSources`, `lastVerified`, `verificationNote`) — only with information you've actually verified. Leave them unset otherwise; the UI handles missing values gracefully.
+5. Optionally fill in the audit fields (`publicationDate`, `adoptionDate`, `effectiveDate`, `primarySource`, `supplementalSources`, `lastVerified`, `verificationNote`) — only with information you've actually verified. Leave them unset otherwise; the UI handles missing values gracefully.
 6. Save. The list page, detail page, and landing-page chart all update automatically — no other file needs to change.
 
 ## Updating an existing entry
@@ -56,6 +56,7 @@ npm run lint      # ESLint
 npm run snapshot                # snapshot today's dataset, refuses to overwrite an existing one
 npm run snapshot -- --force     # overwrite today's snapshot
 npm run snapshot -- 2026-06-15  # snapshot dated for a specific day
+npm run snapshot -- 2026-09-22 --label post-audit  # preserve a named research state
 ```
 
-This writes `data/snapshots/YYYY-MM-DD.json` — a point-in-time copy of everything in `data/policies.ts`. Snapshots are plain JSON on disk; they are not imported anywhere in the app, so they're never bundled into the client. See [`data/snapshots/README.md`](data/snapshots/README.md).
+This writes `data/snapshots/YYYY-MM-DD.json`, or `data/snapshots/YYYY-MM-DD-label.json` when a label is supplied. Labels are sanitised to lowercase kebab-case. Snapshots are plain JSON on disk; they are not imported anywhere in the app, so they're never bundled into the client. See [`data/snapshots/README.md`](data/snapshots/README.md).

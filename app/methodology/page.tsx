@@ -168,24 +168,12 @@ export default function MethodologyPage() {
             available. Publication or adoption alone does not by itself
             produce an &ldquo;Implemented&rdquo; status.
           </p>
-
-          <div className="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-            <p className="font-semibold">Implementation note</p>
-            <p className="mt-1.5">
-              This three-tier framework (Proposed / Adopted / Implemented)
-              is the tracker&rsquo;s methodology going forward. The status
-              badges currently shown on entries (In force, Proposed, Draft,
-              Lapsed) predate this methodology and have not yet been
-              re-assessed against it — that remapping requires a
-              verification pass over each entry&rsquo;s evidence, which has
-              not happened yet. No entry&rsquo;s status has been changed as
-              part of adding this page. See the{" "}
-              <Link href="/changelog" className="font-medium underline">
-                changelog
-              </Link>{" "}
-              for when that happens.
-            </p>
-          </div>
+          <p>
+            Publication, adoption and commencement are recorded separately
+            where the available evidence allows. These dates describe
+            different stages in the life of an instrument and should not be
+            treated as interchangeable.
+          </p>
         </Section>
 
         <Section title="Conflicting evidence">

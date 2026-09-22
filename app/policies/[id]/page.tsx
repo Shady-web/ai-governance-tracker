@@ -46,6 +46,7 @@ export default function PolicyDetailPage({ params }: Props) {
 
   const publicationDate = formatDate(policy.publicationDate);
   const adoptionDate = formatDate(policy.adoptionDate);
+  const effectiveDate = formatDate(policy.effectiveDate);
   const lastVerified = formatDate(policy.lastVerified);
 
   return (
@@ -87,6 +88,9 @@ export default function PolicyDetailPage({ params }: Props) {
             <Field label="Publication date">{publicationDate}</Field>
           )}
           {adoptionDate && <Field label="Adoption date">{adoptionDate}</Field>}
+          {effectiveDate && (
+            <Field label="Effective / commencement date">{effectiveDate}</Field>
+          )}
           <Field label="Primary source">
             {policy.primarySource ? (
               <>
