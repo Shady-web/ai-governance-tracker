@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PolicyExplorer from "@/components/PolicyExplorer";
 
 export const metadata: Metadata = {
@@ -17,6 +18,12 @@ export default function PoliciesPage() {
         Filter by type, status, or jurisdiction, or search by name and
         summary.
       </p>
+      <Link
+        href="/methodology"
+        className="mt-2 inline-block text-sm font-medium text-brand-700 hover:text-brand-800"
+      >
+        How entries are selected and verified →
+      </Link>
       <div className="mt-8">
         <PolicyExplorer />
       </div>

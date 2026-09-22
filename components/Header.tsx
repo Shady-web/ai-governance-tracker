@@ -19,13 +19,29 @@ export default function Header() {
           </span>
         </Link>
         <nav aria-label="Main">
-          <ul className="flex items-center gap-6 text-sm">
+          <ul className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm sm:gap-x-6">
             <li>
               <Link
                 href="/"
                 className="text-slate-600 transition-colors hover:text-brand-700"
               >
                 About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/methodology"
+                className="text-slate-600 transition-colors hover:text-brand-700"
+              >
+                Methodology
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/changelog"
+                className="text-slate-600 transition-colors hover:text-brand-700"
+              >
+                Changelog
               </Link>
             </li>
             <li>

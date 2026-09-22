@@ -1,0 +1,152 @@
+{
+  "snapshotDate": "2026-09-22",
+  "generatedAt": "2026-09-22T09:17:02.629Z",
+  "entryCount": 12,
+  "policies": [
+    {
+      "id": "nigeria-data-protection-act-2023",
+      "name": "Nigeria Data Protection Act, 2023",
+      "issuingBody": "National Assembly of Nigeria / Nigeria Data Protection Commission (NDPC)",
+      "year": 2023,
+      "type": "law",
+      "status": "in-force",
+      "jurisdiction": "Nigeria",
+      "summary": "Nigeria's principal data protection statute, signed into law in June 2023. It establishes the Nigeria Data Protection Commission and sets out rights and obligations governing the processing of personal data, with penalties of up to 2% of annual gross revenue.",
+      "aiProvisions": "Section 37 restricts decisions based solely on automated processing (including profiling) that produce legal or similarly significant effects, permitting them only with consent, under legal authorisation, or where necessary for a contract — with safeguards such as human review. Section 34(1)(a)(viii) requires data subjects to be informed of the existence and consequences of automated decision-making, and high-risk processing such as large-scale profiling triggers a Data Protection Impact Assessment.",
+      "sourceUrl": "https://ndpc.gov.ng/"
+    },
+    {
+      "id": "national-ai-strategy-nais",
+      "name": "National Artificial Intelligence Strategy (NAIS)",
+      "issuingBody": "Federal Ministry of Communications, Innovation and Digital Economy (FMCIDE)",
+      "year": 2024,
+      "yearLabel": "Developed 2024, published 2025",
+      "type": "strategy",
+      "status": "in-force",
+      "jurisdiction": "Nigeria",
+      "summary": "Nigeria's national AI strategy, developed through a multi-stakeholder co-creation process and published by FMCIDE with NITDA as a key implementing body. It sets a five-year vision (2025–2029) to position Nigeria as a leader in ethical and inclusive AI innovation.",
+      "aiProvisions": "Organised around pillars covering AI infrastructure, a thriving AI ecosystem, AI adoption across sectors, responsible and ethical AI governance, and talent development. Sets measurable targets, including equipping at least 70% of young Nigerians (16–35) with AI-related skills, and proposes a dedicated AI governance body to oversee implementation.",
+      "sourceUrl": "https://fmcide.gov.ng/initiative/nais/"
+    },
+    {
+      "id": "nitda-ai-code-of-practice",
+      "name": "NITDA Code of Practice for Artificial Intelligence",
+      "issuingBody": "National Information Technology Development Agency (NITDA)",
+      "year": 2025,
+      "type": "guideline",
+      "status": "draft",
+      "jurisdiction": "Nigeria",
+      "summary": "A NITDA-led regulatory instrument intended to provide sector-agnostic standards for the development, deployment, and use of AI systems in Nigeria. As of mid-2026 the code remains in draft and has not been finalised.",
+      "aiProvisions": "Proposes risk-based obligations and baseline requirements for AI providers, including transparency, risk assessment, human oversight, and conformity and accountability measures to mitigate AI harms. Intended to operationalise the governance pillar of the National AI Strategy.",
+      "sourceUrl": "https://regulations.ai/regulations/nigeria-summary"
+    },
+    {
+      "id": "ndpa-gaid-2025",
+      "name": "NDPA General Application and Implementation Directive (GAID), 2025",
+      "issuingBody": "Nigeria Data Protection Commission (NDPC)",
+      "year": 2025,
+      "type": "guideline",
+      "status": "in-force",
+      "jurisdiction": "Nigeria",
+      "summary": "An implementation directive issued by the NDPC in March 2025 (effective 19 September 2025) that operationalises the Nigeria Data Protection Act. It details registration duties for data controllers of major importance and mandatory annual compliance audits.",
+      "aiProvisions": "Elaborates how the NDPA's automated decision-making and profiling restrictions apply in practice, including audit and impact-assessment expectations for organisations deploying AI systems that process personal data at scale.",
+      "sourceUrl": "https://regulations.ai/regulations/RAI-NG-NA-GAIGNXX-2025"
+    },
+    {
+      "id": "ndeps-2020-2030",
+      "name": "National Digital Economy Policy and Strategy (NDEPS) 2020–2030",
+      "issuingBody": "Federal Ministry of Communications and Digital Economy",
+      "year": 2019,
+      "type": "strategy",
+      "status": "in-force",
+      "jurisdiction": "Nigeria",
+      "summary": "A ten-year roadmap for Nigeria's digital economy launched in November 2019, built on eight pillars including developmental regulation, digital literacy, and solid infrastructure. It is the policy foundation from which Nigeria's later AI initiatives grew.",
+      "aiProvisions": "Identifies emerging technologies, including artificial intelligence, as a driver of the digital economy and led to the commissioning of the National Centre for Artificial Intelligence and Robotics (NCAIR) in November 2020 — the first centre of its kind in Africa.",
+      "sourceUrl": "https://nitda.gov.ng/wp-content/uploads/2020/06/National-Digital-Economy-Policy-and-Strategy.pdf"
+    },
+    {
+      "id": "national-ai-commission-bill",
+      "name": "National Artificial Intelligence Commission (Establishment) Bill",
+      "issuingBody": "National Assembly of Nigeria",
+      "year": 2025,
+      "type": "bill",
+      "status": "proposed",
+      "jurisdiction": "Nigeria",
+      "summary": "A bill before the National Assembly proposing a National AI Commission to oversee AI development and deployment in Nigeria. Legislators are working to consolidate several pending AI bills into a single comprehensive National AI Act.",
+      "aiProvisions": "Would formally establish a national AI regulator with powers including registration requirements and risk-based controls, and the authority to license high-risk AI systems. Still pending committee review and Senate scrutiny as of mid-2026.",
+      "sourceUrl": "https://iapp.org/news/a/nigeria-moves-toward-comprehensive-ai-regulation"
+    },
+    {
+      "id": "ai-robotics-institute-bill",
+      "name": "National Institute for Artificial Intelligence and Robotics (Establishment) Bill",
+      "issuingBody": "House of Representatives, National Assembly of Nigeria",
+      "year": 2024,
+      "type": "bill",
+      "status": "proposed",
+      "jurisdiction": "Nigeria",
+      "summary": "A consolidated bill that passed second reading in the House of Representatives in December 2024, combining four legislative proposals into a foundation for a legal framework on AI. It seeks to establish a national institute for AI and robotics studies and regulation.",
+      "aiProvisions": "Lays groundwork for statutory AI governance, including research, standards-setting, and regulatory functions for AI and robotics. One of several overlapping proposals legislators aim to merge into a single National AI Act.",
+      "sourceUrl": "https://regulations.ai/regulations/RAI-NG-NA-ENIAIXX-2024"
+    },
+    {
+      "id": "au-continental-ai-strategy",
+      "name": "Continental Artificial Intelligence Strategy",
+      "issuingBody": "African Union Executive Council",
+      "year": 2024,
+      "type": "strategy",
+      "status": "in-force",
+      "jurisdiction": "AU",
+      "summary": "The African Union's continent-wide AI strategy, adopted by the AU Executive Council at its 45th Ordinary Session in Accra in July 2024. It commits member states to an Africa-centric, development-focused, and inclusive approach to AI, with implementation running 2025–2030.",
+      "aiProvisions": "Built on five focus areas: harnessing AI's benefits, building AI capabilities, minimising risks, stimulating investment, and fostering cooperation. Calls on member states to adopt unified national AI approaches and strengthen regional and global cooperation on AI governance.",
+      "sourceUrl": "https://au.int/en/documents/20240809/continental-artificial-intelligence-strategy"
+    },
+    {
+      "id": "malabo-convention",
+      "name": "AU Convention on Cyber Security and Personal Data Protection (Malabo Convention)",
+      "issuingBody": "African Union",
+      "year": 2014,
+      "type": "law",
+      "status": "in-force",
+      "jurisdiction": "AU",
+      "summary": "Adopted in 2014, the Malabo Convention entered into force in June 2023 after Mauritania's ratification, making it the only binding regional treaty on data protection outside Europe. It combines cybersecurity, cybercrime, electronic transactions, and data protection in one instrument.",
+      "aiProvisions": "Contains no AI-specific provisions, but its data protection principles — lawful processing, purpose limitation, and obligations around automated processing of personal data — form the binding continental baseline on which African AI governance, including the Continental AI Strategy, is built.",
+      "sourceUrl": "https://au.int/en/treaties/african-union-convention-cyber-security-and-personal-data-protection"
+    },
+    {
+      "id": "au-data-policy-framework",
+      "name": "AU Data Policy Framework",
+      "issuingBody": "African Union Commission",
+      "year": 2022,
+      "type": "framework",
+      "status": "in-force",
+      "jurisdiction": "AU",
+      "summary": "A continental framework endorsed by the AU in 2022 to guide member states in creating enabling data governance environments. It promotes harmonised data regulation to support the African digital single market.",
+      "aiProvisions": "Treats high-quality, well-governed data as the foundation for AI development in Africa and recommends national data governance structures that later instruments, including the Continental AI Strategy, explicitly build upon.",
+      "sourceUrl": "https://au.int/en/documents/20220728/au-data-policy-framework"
+    },
+    {
+      "id": "ecowas-supplementary-act-data-protection",
+      "name": "Supplementary Act A/SA.1/01/10 on Personal Data Protection within ECOWAS",
+      "issuingBody": "ECOWAS Authority of Heads of State and Government",
+      "year": 2010,
+      "type": "law",
+      "status": "in-force",
+      "jurisdiction": "ECOWAS",
+      "summary": "A binding 2010 instrument that applies directly in all 15 ECOWAS member states without national ratification, requiring each state to establish an independent data protection authority. A revision process began in 2024 to modernise the Act.",
+      "aiProvisions": "Predates the AI era but governs the personal-data processing on which AI systems depend, including principles of consent, purpose limitation, and supervisory oversight. The ongoing revision is expected to address newer technologies, including automated processing.",
+      "sourceUrl": "https://ghalii.org/akn/aa-ecowas/act/2010/1-1/eng@2010-12-31"
+    },
+    {
+      "id": "west-african-pact-ethical-ai",
+      "name": "West African Pact on Ethical AI and Digital Education",
+      "issuingBody": "ECOWAS Parliament",
+      "year": 2025,
+      "type": "framework",
+      "status": "proposed",
+      "jurisdiction": "ECOWAS",
+      "summary": "A proposal advanced by ECOWAS parliamentarians in 2025 for a community-wide legal framework on AI, focused on the ethical use of AI in education and justice systems. It remains at the proposal stage.",
+      "aiProvisions": "Would create shared regional rules for responsible AI use in classrooms and courts, promote inclusive multilingual digital content, and strengthen teacher training through a regional EdTech lab network.",
+      "sourceUrl": "https://www.wearetech.africa/en/fils-uk/news/tech/ecowas-lawmakers-push-for-regional-pact-on-ethical-ai-and-digital-education"
+    }
+  ]
+}

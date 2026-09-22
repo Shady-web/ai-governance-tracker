@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { policies } from "@/data/policies";
 import {
   JURISDICTIONS,
@@ -20,21 +21,35 @@ function FilterSelect({
   value,
   onChange,
   options,
+  helpHref,
+  helpLabel,
 }: {
   id: string;
   label: string;
   value: string;
   onChange: (v: string) => void;
   options: { value: string; label: string }[];
+  helpHref?: string;
+  helpLabel?: string;
 }) {
   return (
     <div className="flex flex-col gap-1">
-      <label
-        htmlFor={id}
-        className="text-xs font-medium uppercase tracking-wide text-slate-500"
-      >
-        {label}
-      </label>
+      <div className="flex items-center justify-between gap-2">
+        <label
+          htmlFor={id}
+          className="text-xs font-medium uppercase tracking-wide text-slate-500"
+        >
+          {label}
+        </label>
+        {helpHref && (
+          <Link
+            href={helpHref}
+            className="text-xs font-medium text-brand-700 hover:text-brand-800"
+          >
+            {helpLabel ?? "What does this mean?"}
+          </Link>
+        )}
+      </div>
       <select
         id={id}
         value={value}
@@ -114,6 +129,8 @@ export default function PolicyExplorer() {
               value: s,
               label: STATUS_LABELS[s],
             }))}
+            helpHref="/methodology#status-definitions"
+            helpLabel="What do these mean?"
           />
           <FilterSelect
             id="filter-jurisdiction"

@@ -101,6 +101,12 @@ export default function HomePage() {
               </p>
             </div>
           </div>
+          <Link
+            href="/methodology"
+            className="mt-8 inline-block text-sm font-semibold text-brand-700 hover:text-brand-800"
+          >
+            Read the full research methodology →
+          </Link>
         </div>
       </section>
     </>
