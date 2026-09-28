@@ -7,7 +7,7 @@ import {
 } from "@/data/types";
 
 /**
- * Lightweight visual summary rendered as pure CSS bars — no chart library.
+ * Lightweight visual summary rendered as pure CSS bars, without a chart library.
  * Counts are computed at build time from data/policies.ts.
  */
 

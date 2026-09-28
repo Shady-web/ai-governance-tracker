@@ -1,9 +1,9 @@
 /**
  * Research changelog for the AI Governance Tracker.
  *
- * Records verified corrections to existing entries — status changes,
+ * Records verified corrections to existing entries (status changes,
  * corrected dates, replaced sources, jurisdiction/type corrections, and
- * significant verification notes — instead of silently overwriting them.
+ * significant verification notes) instead of silently overwriting them.
  * See /changelog and /methodology on the site.
  *
  * ─── HOW TO ADD AN ENTRY ────────────────────────────────────────────────
@@ -11,7 +11,7 @@
  * `data/policies.ts`, backed by a verified source. Do not record
  * speculative or planned changes.
  *
- * 1. Append an object to the array below (any position — the changelog
+ * 1. Append an object to the array below (any position; the changelog
  *    page sorts by `date` automatically, newest first).
  * 2. `date` is the date the correction was recorded, in ISO form
  *    (YYYY-MM-DD).
@@ -175,7 +175,7 @@ export const changelog: ChangelogEntry[] = [
     date: "2026-09-22",
     instrumentId: "ndeps-2020-2030",
     instrumentTitle:
-      "National Digital Economy Policy and Strategy (NDEPS) 2020–2030",
+      "National Digital Economy Policy and Strategy (NDEPS) 2020-2030",
     field: "inclusion",
     previousValue: "Core tracker entry",
     newValue: "Removed from core tracker",

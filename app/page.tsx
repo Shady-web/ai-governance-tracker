@@ -14,13 +14,13 @@ export default function HomePage() {
             A policy reference tool
           </p>
           <h1 className="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-            Tracking how Nigeria — and Africa — governs artificial intelligence
+            Tracking how Nigeria and Africa govern artificial intelligence
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-600">
-            A curated, plain-language tracker of AI-related laws, bills,
-            strategies, guidelines, directives, treaties, and frameworks in Nigeria, alongside
-            African Union and ECOWAS-level instruments that shape the
-            continental context.
+            A plain-language tracker of AI-related laws, bills, strategies,
+            guidelines, directives, treaties, and frameworks in Nigeria,
+            alongside African Union and ECOWAS instruments that set the
+            regional context.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
@@ -77,7 +77,7 @@ export default function HomePage() {
               <h3 className="font-semibold text-slate-900">What is tracked</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
                 Laws, bills, strategies, guidelines, directives, treaties, and frameworks that
-                regulate, enable, or directly affect artificial intelligence —
+                regulate, enable, or directly affect artificial intelligence,
                 including data protection instruments that govern automated
                 decision-making and the data AI systems depend on.
               </p>

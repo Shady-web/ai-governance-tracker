@@ -7,7 +7,7 @@ edited or corrected.
 - Filename: `YYYY-MM-DD.json`, or `YYYY-MM-DD-label.json` for a labelled
   research state
 - Created with: `npm run snapshot` (see the root README for details)
-- Not imported by the app — these are plain JSON on disk, not part of the
+- Not imported by the app. These are plain JSON on disk, not part of the
 client bundle.
 
 ## Preserved audit states
@@ -25,5 +25,5 @@ npm run snapshot -- 2026-09-22 --label post-audit
 ```
 
 Do not hand-edit snapshot files. They're a record of what the dataset
-looked like on that date, not a place to make corrections — corrections
+looked like on that date, not a place to make corrections. Corrections
 belong in `data/policies.ts`, with a matching entry in `data/changelog.ts`.

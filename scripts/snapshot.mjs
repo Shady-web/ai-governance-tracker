@@ -11,7 +11,7 @@
  *
  * Uses the `typescript` package (already a devDependency) to transpile
  * data/policies.ts on the fly, so no build step or extra dependency is
- * required. Snapshots are plain JSON files under data/snapshots/ — they are
+ * required. Snapshots are plain JSON files under data/snapshots/. They are
  * not imported by the app, so they are never bundled into the client.
  */
 import { fileURLToPath } from "node:url";
@@ -36,7 +36,7 @@ function loadPolicies() {
 
   const mod = { exports: {} };
   // data/policies.ts only has a type-only import (`import type ... from "./types"`),
-  // which transpileModule elides entirely — this stub is just a safety net.
+  // which transpileModule elides entirely; this stub is just a safety net.
   const requireShim = (id) => {
     throw new Error(`Unexpected require("${id}") while loading policies.ts for snapshot`);
   };

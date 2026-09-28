@@ -5,7 +5,7 @@ import type { PolicyEntry } from "./types";
  * 1. Copy any object below and paste it at the end of the array.
  * 2. Give it a unique kebab-case `id` (this becomes the URL slug).
  * 3. Fill in every field. `type`, `status`, and `jurisdiction` must be one of
- *    the allowed values in data/types.ts — TypeScript will warn you if not.
+ *    the allowed values in data/types.ts; TypeScript will warn you if not.
  * 4. Save. The list page, detail page, and landing-page chart all update
  *    automatically. No other file needs to change.
  * ───────────────────────────────────────────────────────────────────────────
@@ -25,7 +25,7 @@ export const policies: PolicyEntry[] = [
     summary:
       "Nigeria's principal data-protection statute. The Act establishes the Nigeria Data Protection Commission and creates enforceable rights and obligations governing personal-data processing, including provisions relevant to automated decision-making.",
     aiProvisions:
-      "Section 37 restricts decisions based solely on automated processing (including profiling) that produce legal or similarly significant effects, permitting them only with consent, under legal authorisation, or where necessary for a contract — with safeguards such as human review. Section 34(1)(a)(viii) requires data subjects to be informed of the existence and consequences of automated decision-making, and high-risk processing such as large-scale profiling triggers a Data Protection Impact Assessment.",
+      "Section 37 restricts decisions based solely on automated processing (including profiling) that produce legal or similarly significant effects, permitting them only with consent, under legal authorisation, or where necessary for a contract, subject to safeguards such as human review. Section 34(1)(a)(viii) requires data subjects to be informed of the existence and consequences of automated decision-making, and high-risk processing such as large-scale profiling triggers a Data Protection Impact Assessment.",
     sourceUrl:
       "https://ndpc.gov.ng/wp-content/uploads/2024/03/Nigeria_Data_Protection_Act_2023.pdf",
     publicationDate: "2023-07-01",
@@ -52,9 +52,9 @@ export const policies: PolicyEntry[] = [
     status: "adopted",
     jurisdiction: "Nigeria",
     summary:
-      "Nigeria's national AI strategy, developed through a multi-stakeholder co-creation process and published by FMCIDE with NITDA as a key implementing body. It sets a five-year vision (2025–2029) to position Nigeria as a leader in ethical and inclusive AI innovation.",
+      "Nigeria's national AI strategy, developed through a multi-stakeholder co-creation process and published by FMCIDE with NITDA as a key implementing body. It sets a five-year vision (2025 to 2029) to position Nigeria as a leader in ethical and inclusive AI innovation.",
     aiProvisions:
-      "Organised around pillars covering AI infrastructure, a thriving AI ecosystem, AI adoption across sectors, responsible and ethical AI governance, and talent development. Sets measurable targets, including equipping at least 70% of young Nigerians (16–35) with AI-related skills, and proposes a dedicated AI governance body to oversee implementation.",
+      "Organised around pillars covering AI infrastructure, a thriving AI ecosystem, AI adoption across sectors, responsible and ethical AI governance, and talent development. Sets measurable targets, including equipping at least 70% of young Nigerians (aged 16 to 35) with AI-related skills, and proposes a dedicated AI governance body to oversee implementation.",
     sourceUrl:
       "https://ncair.nitda.gov.ng/wp-content/uploads/2025/09/National-Artificial-Intelligence-Strategy-19092025.pdf",
     publicationDate: null,
@@ -157,7 +157,7 @@ export const policies: PolicyEntry[] = [
     effectiveDate: null,
     primarySource: {
       title:
-        "Senate Bills Progression Chart (June 2023–June 2027), as at 10 July 2025",
+        "Senate Bills Progression Chart (June 2023-June 2027), as at 10 July 2025",
       url: "https://nass.gov.ng/documents/billdownload/11207.pdf",
       publisher: "National Assembly of Nigeria",
     },
@@ -196,12 +196,12 @@ export const policies: PolicyEntry[] = [
     name: "Continental Artificial Intelligence Strategy",
     issuingBody: "African Union Executive Council",
     year: 2024,
-    yearLabel: "Endorsed by the AU Executive Council, 18–19 July 2024",
+    yearLabel: "Endorsed by the AU Executive Council, 18 and 19 July 2024",
     type: "strategy",
     status: "implemented",
     jurisdiction: "AU",
     summary:
-      "The African Union's continent-wide AI strategy, adopted by the AU Executive Council at its 45th Ordinary Session in Accra in July 2024. It commits member states to an Africa-centric, development-focused, and inclusive approach to AI, with implementation running 2025–2030.",
+      "The African Union's continent-wide AI strategy, adopted by the AU Executive Council at its 45th Ordinary Session in Accra in July 2024. It commits member states to an Africa-centric, development-focused, and inclusive approach to AI, with implementation running from 2025 to 2030.",
     aiProvisions:
       "Built on five focus areas: harnessing AI's benefits, building AI capabilities, minimising risks, stimulating investment, and fostering cooperation. Calls on member states to adopt unified national AI approaches and strengthen regional and global cooperation on AI governance.",
     sourceUrl:
@@ -224,7 +224,7 @@ export const policies: PolicyEntry[] = [
     ],
     lastVerified: "2026-09-22",
     verificationNote:
-      "The AU Executive Council endorsed the strategy during its 45th Ordinary Session on 18–19 July 2024. The strategy sets an implementation period of 2025–2030, and subsequent African Union activity provides separate evidence that implementation is underway. The Implemented classification does not imply that all strategy actions have been completed.",
+      "The AU Executive Council endorsed the strategy during its 45th Ordinary Session on 18 and 19 July 2024. The strategy sets an implementation period of 2025 to 2030, and subsequent African Union activity provides separate evidence that implementation is underway. The Implemented classification does not imply that all strategy actions have been completed.",
   },
   {
     id: "malabo-convention",

@@ -7,7 +7,7 @@ import { formatDate } from "@/lib/dates";
 export const metadata: Metadata = {
   title: "Changelog",
   description:
-    "A dated record of research corrections to the AI Governance Tracker — status changes, corrected dates, replaced sources, and other verified updates.",
+    "A dated record of research corrections to the AI Governance Tracker, including status changes, corrected dates, replaced sources, and other verified updates.",
 };
 
 function ChangelogRow({
@@ -79,9 +79,9 @@ export default function ChangelogPage() {
         Changelog
       </h1>
       <p className="mt-3 max-w-2xl text-slate-600">
-        Significant research corrections — status changes, corrected dates,
-        replaced sources, and similar updates — are recorded here rather
-        than silently overwritten. See the{" "}
+        Significant research corrections, such as status changes, corrected
+        dates, and replaced sources, are recorded here rather than silently
+        overwritten. See the{" "}
         <Link href="/methodology" className="font-medium text-brand-700 underline hover:text-brand-800">
           methodology
         </Link>{" "}

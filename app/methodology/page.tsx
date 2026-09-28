@@ -59,9 +59,8 @@ export default function MethodologyPage() {
           </p>
           <p>
             Its purpose is not to list every document that mentions
-            artificial intelligence. It is intended to make changes in the
-            governance landscape easier to verify, compare and follow over
-            time.
+            artificial intelligence. It is intended to make changes in AI
+            governance easier to verify, compare and follow over time.
           </p>
         </Section>
 
@@ -215,7 +214,7 @@ export default function MethodologyPage() {
           <p>
             Entries that have not yet been through a verification pass show{" "}
             <span className="font-medium">&ldquo;Verification date pending&rdquo;</span>{" "}
-            instead of a fabricated or default date — including the
+            instead of a fabricated or default date, such as the
             deployment date or today&rsquo;s date.
           </p>
         </Section>
@@ -239,13 +238,22 @@ export default function MethodologyPage() {
             </li>
             <li>
               Entries may be revised when stronger or newer evidence
-              becomes available — see the{" "}
+              becomes available (see the{" "}
               <Link href="/changelog" className="font-medium text-brand-700 underline hover:text-brand-800">
                 changelog
               </Link>
-              .
+              ).
             </li>
           </ul>
+        </Section>
+
+        <Section title="AI Assistance">
+          <p>
+            This tracker was developed using Claude Code and builds on
+            source research conducted for my AI governance work. I reviewed
+            and verified the policy entries against their sources and remain
+            responsible for the content and classifications presented here.
+          </p>
         </Section>
       </div>
     </div>

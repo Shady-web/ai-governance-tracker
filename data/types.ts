@@ -23,7 +23,7 @@ export type PolicyType = (typeof POLICY_TYPES)[number];
 export type PolicyStatus = (typeof POLICY_STATUSES)[number];
 export type Jurisdiction = (typeof JURISDICTIONS)[number];
 
-/** A cited source: a specific document, page, or record — not just a bare URL. */
+/** A cited source: a specific document, page, or record, not just a bare URL. */
 export interface PolicySource {
   /** Title of the cited document or page */
   title: string;
@@ -49,18 +49,18 @@ export interface PolicyEntry {
   status: PolicyStatus;
   /** Issuing jurisdiction */
   jurisdiction: Jurisdiction;
-  /** Plain-language summary, 2–3 sentences */
+  /** Plain-language summary, 2 to 3 sentences */
   summary: string;
   /** What the instrument actually says about AI */
   aiProvisions: string;
   /**
    * Link to the primary source or an authoritative tracker.
-   * Kept for backward compatibility — `primarySource` below is preferred
+   * Kept for backward compatibility; `primarySource` below is preferred
    * once an entry has been through methodology-based verification.
    */
   sourceUrl: string;
 
-  // ─── Methodology / audit fields (optional — see /methodology) ──────────
+  // ─── Methodology / audit fields (optional, see /methodology) ──────────
   // These support the tracker's research methodology and are populated
   // only as entries go through verification. They are intentionally
   // optional so existing entries keep working, unfilled, until reviewed.
@@ -76,12 +76,12 @@ export interface PolicyEntry {
    * in /methodology). Falls back to `sourceUrl` in the UI when absent.
    */
   primarySource?: PolicySource | null;
-  /** Secondary reporting used to discover the instrument or add context — not the basis for status/legal claims. */
+  /** Secondary reporting used to discover the instrument or add context, not the basis for status/legal claims. */
   supplementalSources?: PolicySource[];
   /**
    * ISO date (YYYY-MM-DD) this entry's status and source links were last
    * checked against sources. NOT the same as `publicationDate`/`adoptionDate`.
-   * Leave unset until an entry has actually been reviewed — the UI shows
+   * Leave unset until an entry has actually been reviewed; the UI shows
    * "Verification date pending" rather than guessing a date.
    */
   lastVerified?: string | null;
